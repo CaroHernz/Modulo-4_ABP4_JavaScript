@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo 4 | Actividad 5</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body class="bg-dark bg-opacity-25">
+    <header></header>
+    <main>
+        <div class="container bg-light m-5 p-5">
+            <div class="text-center">
+                <h1><strong>Módulo 4:</strong> Actividad 5</h1>
+                <br>
+                <p><strong>Aprendizaje esperado: </strong>
+                    Codificar un programa utilizando funciones para la reutilización de código acorde al lenguaje Javascript</p>
+                <div class="container py-4">
+                    <button class="btn bg-white btn-outline-info" data-problema="1" onclick="visualizarProblema(event)">Problema 1</button>
+                    <button class="btn bg-white btn-outline-info" data-problema="2" onclick="visualizarProblema(event)">Problema 2</button>
+                    <button class="btn bg-white btn-outline-info" data-problema="3" onclick="visualizarProblema(event)">Problema 3</button>
+                    <button class="btn bg-white btn-outline-info" data-problema="4" onclick="visualizarProblema(event)">Problema 4</button>
+                    <button class="btn bg-white btn-outline-info" data-problema="5" onclick="visualizarProblema(event)">Problema 5</button>
+                    <button class="btn bg-white btn-outline-info" data-problema="6" onclick="visualizarProblema(event)">Problema 6</button>
+
+                </div>
+                <div class="container">
+                    <div class="problema visually-hidden" data-id="1">
+                        <p><strong>Problema 1: </strong>Construya una función que dado un número n entero y menor que 100 calcule la sumatoria de 1 hasta n</p>
+                        <div class="row g-1">
+                            <div class="col-4">
+                                <label class="form-label" for="problema1">Ingrese un número: </label>
+                            </div>
+                            <div class="col-4">
+                                <input class="form-control" type="number" id="problema1" placeholder="Ej: 60" max="100">
+                            </div>
+                            <div class="col-4">
+                                <button type="submit" class="btn btn-info mb-3" onclick="funcionSumatoria()">Ingresar</button>
+                            </div>
+                        </div>
+                        <div class="bg-info p-2 bg-opacity-25" id="resultadoProblema1"></div>
+                    </div>
+                    <div class="problema visually-hidden" data-id="2">
+                        <p><strong>Problema 2: </strong>Construya una función que imprima si un número es primo o no. Los números primos son aquellos que son divisibles solo por 1 y por sí mismos. </p>
+                        <div class="row g-1">
+                            <div class="col-4">
+                                <label class="form-label" for="problema2">Ingrese un número: </label>
+                            </div>
+                            <div class="col-4">
+                                <input class="form-control" type="number" id="problema2" placeholder="Ej: 5">
+                            </div>
+                            <div class="col-4">
+                                <button type="submit" class="btn btn-info mb-3" onclick="funcionPrimo()">Ingresar</button>
+                            </div>
+                        </div>
+                        <div class="bg-info p-2 bg-opacity-25" id="resultadoProblema2"></div>
+                    </div>
+                    <div class="problema visually-hidden" data-id="3">
+                        <p><strong>Problema 3: </strong>Cree una función que dado un número n entero y menor que 100 imprima la cuenta regresiva, es decir si n es 5 deberá imprimir 5,4,3,2,1</p>
+                        <div class="row g-1">
+                            <div class="col-4">
+                                <label class="form-label" for="problema3">Ingrese un número: </label>
+                            </div>
+                            <div class="col-4">
+                                <input class="form-control" type="number" id="problema3" placeholder="Ej: 3" max="100">
+                            </div>
+                            <div class="col-4">
+                                <button type="submit" class="btn btn-info mb-3" onclick="cuentaRegresiva()">Ingresar</button>
+                            </div>
+                        </div>
+                        <div class="bg-info p-2 bg-opacity-25" id="resultadoProblema3"></div>
+
+                    </div>
+                    <div class="problema visually-hidden" data-id="4">
+                        <p><strong>Problema 4: </strong>Construya una función que dado un número n entero mayor que 10 y menor que 1000 calcule la sumatoria de todos los números pares contenidos en el rango.</p>
+                        <div class="row g-1">
+                            <div class="col-4">
+                                <label class="form-label" for="problema4">Ingrese un número: </label>
+                            </div>
+                            <div class="col-4">
+                                <input class="form-control" type="number" id="problema4" placeholder="Ej: 55" min="11" max="1000">
+                            </div>
+                            <div class="col-4">
+                                <button type="submit" class="btn btn-info mb-3" onclick="sumatoriaPares()">Buscar</button>
+                            </div>
+                        </div>
+                        <div class="bg-info p-2 bg-opacity-25" id="resultadoProblema4"></div>
+
+                    </div>
+                    <div class="problema  visually-hidden" data-id="5">
+                        <p><strong>Problema 5: </strong>Cree una función que permite dado un número n imprima la tabla de multiplicar de dicho número hasta el 12.</p>
+                        <div class="row g-1">
+                            <div class="col-4">
+                                <label class="form-label" for="problema5">Ingrese un número: </label>
+                            </div>
+                            <div class="col-4">
+                                <input class="form-control" type="number" id="problema5" placeholder="Ej: 8">
+                            </div>
+                            <div class="col-4">
+                                <button type="submit" class="btn btn-info mb-3" onclick="tablaMultiplicar()">Ordenar</button>
+                            </div>
+                        </div>
+                        <div class="bg-info p-2 bg-opacity-25" id="resultadoProblema5"></div>
+
+                    </div>
+                    <div class="problema  visually-hidden" data-id="6">
+                        <p><strong>Problema 6: </strong>Crear un programa que dado un arreglo de números desordenados los ordene ascendentemente.</p>
+                        <div class="row g-1">
+                            <div class="col-4">
+                                <label class="form-label" for="problema5">Ingrese un número: </label>
+                            </div>
+                            <div class="col-4">
+                                <input class="form-control" type="text" id="problema6" placeholder="Ej: 5, 3, 8, 1">
+                            </div>
+                            <div class="col-4">
+                                <button type="submit" class="btn btn-info mb-3" onclick="ordenarArreglo()">Ordenar</button>
+                            </div>
+                        </div>
+                        <div class="bg-info p-2 bg-opacity-25" id="resultadoProblema6"></div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="text-center bg-info p-2">
+            <p><small>Carolina Hernández Barra</small></p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <script src="./assets/js/abp5.js"></script>
+</body>
+</html>
