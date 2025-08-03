@@ -6,3 +6,9 @@
     color: white;
     box-shadow: 0px 0px 2px rgba(0,0,0,0.3);
 }
+.imagen-cinema {
+    width: 512px;
+    height: 310px;
+    object-fit: cover;
+    object-position: center;
+}
